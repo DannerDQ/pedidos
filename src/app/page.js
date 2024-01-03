@@ -81,7 +81,7 @@ export default function Home() {
         </ul>
       </section>
       <section >
-        <div>
+        <div className="title">
           <h2>Pedidos:</h2>
           <span>S/.{total}</span>
         </div>
