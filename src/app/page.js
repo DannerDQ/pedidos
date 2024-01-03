@@ -5,6 +5,7 @@ import "./page.css"
 
 export default function Home() {
   const [orders, setOrders] = useState({});
+  const [total, setTotal] = useState(0)
   const menu = [
     {
       name: "combinado ",
@@ -51,6 +52,16 @@ export default function Home() {
     return ordersToRender;
   }
 
+  useEffect(()=>{
+    let acum = 0
+    for (let id in orders) {
+      const {price} = orders[id]
+
+      acum += price
+    }
+    setTotal(acum)
+  }, [orders])
+
   return (
     <main>
       <section className="menu">
@@ -70,7 +81,10 @@ export default function Home() {
         </ul>
       </section>
       <section >
-        <h2>Pedidos:</h2>
+        <div>
+          <h2>Pedidos:</h2>
+          <span>S/.{total}</span>
+        </div>
         <div className="summary">
           <ul>
             {Object.keys(orders).length === 0 ? (
