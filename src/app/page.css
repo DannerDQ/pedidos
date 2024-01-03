@@ -89,3 +89,8 @@ button:active {
   display: flex;
   justify-content: space-between;
 }
+
+.title h2 {
+  width: fit-content;
+
+}
