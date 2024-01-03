@@ -83,7 +83,7 @@ export default function Home() {
       <section >
         <div className="title">
           <h2>Pedidos:</h2>
-          <span>S/.{total}</span>
+          <span>S/.{total.toFixed(2)}</span>
         </div>
         <div className="summary">
           <ul>
