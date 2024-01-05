@@ -70,7 +70,7 @@ const dishes: Dish[] = [
       {
         name: "hot dog",
         price: 13,
-        free: false
+        free: true
       }
     ],
     free: true,
