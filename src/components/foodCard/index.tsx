@@ -6,7 +6,7 @@ import { AddOutline, EditOutline } from "@icons";
 
 export default function FoodCard({food}:{food: Food}){
   const handleClick = (food: Food) => {
-    
+    alert("Aún falta we :c")
   }
 
   return (
