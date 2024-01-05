@@ -1,0 +1,9 @@
+.variant label {
+    display: grid;
+    grid-template-columns: repeat(2, auto) 1fr;
+    gap: var(--gap);
+}
+
+.variant span {
+    justify-self: self-end;
+}

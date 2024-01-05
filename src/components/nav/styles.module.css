@@ -1,0 +1,27 @@
+.nav {
+    display: flex;
+    justify-content: space-between;
+    padding: var(--padding);
+    background-color: var(--secondary-bg-color);
+}
+
+.logo {
+    width: var(--logo-size);
+    height: auto;
+}
+
+.navigation {
+    display: flex;
+    gap: .5em;
+    align-items: center;
+    font-size: calc(var(--font-size) * 1.2);
+}
+
+.navigation input {
+    width: 0;
+    height: 0;
+}
+
+.navigation input:checked + label > a {
+    color: #9a9a9a
+}
