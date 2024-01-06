@@ -1,6 +1,6 @@
 "use client"
 
-import { Dish, Drink, Menu as MenuType } from "@types";
+import { Dish, Drink } from "@types";
 import { Context, Dispatch,ReactNode, SetStateAction, createContext, useEffect, useState } from "react";
 import mixto from "@public/mixto.jpg"
 import broaster from "@public/broaster.jpg"
@@ -144,14 +144,14 @@ const drinks: Drink[] = [
 export function DishesProvider({ children }: { children: ReactNode }) {
   const [dishesMenu, setDishes] = useState(dishes);
 
-  useEffect(() => {
-    const storageDishes = localStorage.getItem("dishes");
-    if (!storageDishes) {
-      localStorage.setItem("dishes", JSON.stringify(dishes));
-    } else {
-      setDishes(JSON.parse(storageDishes));
-    }
-  }, []);
+  // useEffect(() => {
+  //   const storageDishes = localStorage.getItem("dishes");
+  //   if (!storageDishes) {
+  //     localStorage.setItem("dishes", JSON.stringify(dishes));
+  //   } else {
+  //     setDishes(JSON.parse(storageDishes));
+  //   }
+  // }, []);
 
   return (
     <Dishes.Provider value={{ dishes: dishesMenu, setDishes }}>
@@ -163,15 +163,15 @@ export function DishesProvider({ children }: { children: ReactNode }) {
 export function DrinksProvider({ children }: { children: ReactNode }) {
   const [drinksMenu, setDrinks] = useState(drinks);
 
-  useEffect(() => {
-    const storageDrinks = localStorage.getItem("drinks");
+  // useEffect(() => {
+  //   const storageDrinks = localStorage.getItem("drinks");
 
-    if (!storageDrinks) {
-      localStorage.setItem("drinks", JSON.stringify(drinks));
-    } else {
-      setDrinks(JSON.parse(storageDrinks));
-    }
-  }, []);
+  //   if (!storageDrinks) {
+  //     localStorage.setItem("drinks", JSON.stringify(drinks));
+  //   } else {
+  //     setDrinks(JSON.parse(storageDrinks));
+  //   }
+  // }, []);
 
   return <Drinks.Provider value={{ drinks: drinksMenu, setDrinks }}>{children}</Drinks.Provider>;
 }
