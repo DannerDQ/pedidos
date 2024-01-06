@@ -5,11 +5,17 @@
     display: flex;
     flex-direction: column;
     border-radius: 1em;
-    background: #fff1;
+    background: var(--backdrop-bg-color);
     backdrop-filter: blur(20px);
     -webkit-box-shadow: 0px 4px 5px -2px rgba(0, 0, 0, 0.5), 0px 7px 10px 1px rgba(0, 0, 0, 0.6), 0px 2px 16px 1px rgba(0, 0, 0, 0.7);
     box-shadow: 0px 4px 5px -2px rgba(0, 0, 0, 0.5), 0px 7px 10px 1px rgba(0, 0, 0, 0.6), 0px 2px 16px 1px rgba(0, 0, 0, 0.7);
     overflow: hidden;
+}
+
+.card h3 {
+    display: flex;
+    align-items: center;
+    gap: var(--gap);
 }
 
 .variants {
@@ -48,9 +54,16 @@
 .card_footer button svg {
     height: 100%;
     width: auto;
-}
-
-.card_footer button .outline {
     stroke: var(--color);
     fill: none;
+}
+
+.card_footer button:active:not(:disabled) > svg {
+    fill: var(--color);
+    stroke: var(--backdrop-bg-color);
+    scale: 1.2 ;
+}
+
+.card_footer button:disabled > svg {
+    stroke: var(--inactive-color);
 }

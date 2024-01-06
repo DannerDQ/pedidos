@@ -2,6 +2,7 @@ import {DishesProvider, DrinksProvider} from '@context/menu';
 import DishesMenu from '@component/dishes';
 import styles from './page.module.css'
 import DrinksMenu from '@component/drinks';
+import EnqueueOrder from '@component/enqueueOrder';
 
 export default function Home() {
   
@@ -19,6 +20,7 @@ export default function Home() {
           <DrinksMenu/>
         </DrinksProvider>
       </section>
+      <EnqueueOrder/> 
     </main>
   );
 }

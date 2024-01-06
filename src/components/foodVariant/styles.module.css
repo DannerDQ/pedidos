@@ -7,3 +7,7 @@
 .variant span {
     justify-self: self-end;
 }
+
+.variant input:disabled ~ * {
+    color: var(--inactive-color);
+}

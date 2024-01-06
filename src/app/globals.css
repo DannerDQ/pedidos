@@ -13,7 +13,9 @@ next-route-announcer {
   --secondary-bg-color: #06070a;
   --backdrop-bg-color: #22252b;
   --color: #fff;
-  --active-color: #fff9;
+  --inactive-color: #9a9a9a;
+  --available: #01b636;
+  --not-available: #b90e0a;
   --font-family: 
     Arial,
     Helvetica,
@@ -100,4 +102,20 @@ header {
   position: sticky;
   top: 0;
   z-index: 999;
+}
+
+h3 {
+  width: fit-content;
+}
+
+.available {
+  fill: var(--available);
+  height: var(--font-size);
+  width: auto;
+}
+
+.not_available {
+  fill: var(--not-available);
+  height: var(--font-size);
+  width: auto;
 }

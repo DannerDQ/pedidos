@@ -65,12 +65,14 @@ const dishes: Dish[] = [
       {
         name: "huevo",
         price: 13,
-        free: true
+        free: true,
+        value: "triple + huevo"
       },
       {
         name: "hot dog",
         price: 13,
-        free: true
+        free: true,
+        value: "triple + hot dog"
       }
     ],
     free: true,
@@ -86,16 +88,19 @@ const drinks: Drink[] = [
         name: "1 litro",
         price: 8,
         free: true,
+        value: "1L de refresco"
       },
       {
         name: "1/2 litro",
         price: 4,
         free: true,
+        value: "1/2L de refresco"
       },
       {
         name: "1 vaso",
         price: 2,
         free: true,
+        value: "1 vaso de refresco"
       },
     ],
     free: true,
@@ -123,11 +128,13 @@ const drinks: Drink[] = [
         name: "manzanilla",
         price: 2,
         free: true,
+        value: "té de manzanilla"
       },
       {
         name: "anís",
         price: 2,
         free: true,
+        value: "té de anís"
       },
     ],
     free: true,

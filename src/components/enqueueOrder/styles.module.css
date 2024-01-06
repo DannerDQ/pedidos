@@ -1,0 +1,20 @@
+.enqueue {
+    position: sticky;
+    top: unset;
+    bottom: 0;
+}
+
+.enqueue button {
+    background-color: var(--backdrop-bg-color);
+    padding: var(--padding);
+    width: 100%;
+    color: var(--color);
+}
+
+.enqueue button:disabled {
+    color: var(--inactive-color);
+}
+
+.enqueue button:active:not(:disabled) {
+    background-color: var(--secondary-bg-color);
+}

@@ -3,6 +3,7 @@ import type { Metadata } from 'next'
 
 import './globals.css'
 import Nav from '@component/nav'
+import OrderListProvider from '@context/orders'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -23,7 +24,9 @@ export default function RootLayout({
         <header>
           <Nav/>
         </header>
-        {children}
+        <OrderListProvider>
+          {children}
+        </OrderListProvider>
       </body>
     </html>
   )
